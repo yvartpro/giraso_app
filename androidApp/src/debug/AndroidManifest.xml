@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.giraso.giraso">
+
+    <application>
+        <service android:name="com.giraso.giraso.Libp2pDebugService"
+            android:exported="true" />
+    </application>
+</manifest>
