@@ -17,6 +17,7 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.compose.foundation)
     implementation(libs.compose.material)
+    implementation(libs.compose.material3)
     implementation(libs.compose.ui)
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
