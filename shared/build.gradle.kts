@@ -52,7 +52,7 @@ kotlin {
             // Serialization
             implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.9.0")
             // Datetime
-            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.7.1")
+            implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.1")
             // Koin
             implementation("io.insert-koin:koin-core:4.1.0")
             // Settings
