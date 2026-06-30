@@ -18,6 +18,7 @@ class Libp2pChatRepository(
 ) : ChatRepository {
     private val scope = CoroutineScope(Dispatchers.Main + SupervisorJob())
     private var messageListener: ((ChatMessage) -> Unit)? = null
+    private val peerTracker = Libp2pPeerTracker(client)
 
     private val _messagesFlow = MutableSharedFlow<ChatMessage>(extraBufferCapacity = 100)
 
@@ -56,11 +57,7 @@ class Libp2pChatRepository(
 
     override fun observeMessages(): Flow<ChatMessage> = _messagesFlow.asSharedFlow()
 
-    override fun observePeers(): Flow<List<Peer>> {
-        return client.peers.map { peerIds ->
-            peerIds.map { Peer(id = it, nickname = "Peer-${it.take(8)}") }
-        }
-    }
+    override fun observePeers(): Flow<List<Peer>> = peerTracker.observePeers()
 
     override fun whoami(): String = client.whoami()
 }
