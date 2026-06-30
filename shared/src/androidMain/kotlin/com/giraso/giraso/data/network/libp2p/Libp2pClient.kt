@@ -48,6 +48,7 @@ class Libp2pClient(private val context: Context, private val idFileName: String 
   private val subscriptions = mutableMapOf<String, PubsubSubscription>()
 
   fun start() {
+    android.util.Log.i("LIBP2P_DEBUG", "Libp2pClient.start() called")
     Logger.d(TAG, "[START] beginning libp2p initialization")
     val privKey = loadOrCreateKey()
 
@@ -72,7 +73,6 @@ class Libp2pClient(private val context: Context, private val idFileName: String 
       }
       network {
         listen("/ip4/0.0.0.0/tcp/0")
-        listen("/ip4/127.0.0.1/tcp/0")
       }
     }.also { h ->
       Logger.d(TAG, "[START] host dsl built, starting...")

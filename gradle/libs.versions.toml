@@ -14,6 +14,7 @@ junit = "4.13.2"
 koin = "4.1.0"
 kotlin = "2.4.0"
 libp2p = "1.2.2-RELEASE"
+material-icons-extended = "1.7.3"
 material3 = "1.11.0-alpha07"
 navigation-compose = "2.8.0-alpha10"
 
@@ -35,6 +36,7 @@ compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", v
 compose-material = { module = "org.jetbrains.compose.material:material", version.ref = "composeMultiplatform" }
 compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "material3" }
 compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
+compose-icons-extended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "material-icons-extended" }
 compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "composeMultiplatform" }
 compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
 compose-navigation = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigation-compose" }

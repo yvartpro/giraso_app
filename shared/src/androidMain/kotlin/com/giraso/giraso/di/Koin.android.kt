@@ -7,6 +7,6 @@ import org.koin.core.module.Module
 import org.koin.dsl.module
 
 actual val platformModule: Module = module {
-    single { Libp2pClient(get()) }
-    single<ChatRepository> { Libp2pChatRepository(get()) }
+    single(createdAtStart = true) { Libp2pClient(get()) }
+    single<ChatRepository>(createdAtStart = true) { Libp2pChatRepository(get()) }
 }

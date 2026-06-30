@@ -23,7 +23,12 @@ fun AppNav() {
     }
     composable<Route.Chat> { backStackEntry ->
       val chatRoute: Route.Chat = backStackEntry.toRoute()
-      ChatScreen(room = chatRoute.roomName)
+      ChatScreen(
+        room = chatRoute.roomName,
+        onBack = {
+          navController.popBackStack()
+        }
+      )
     }
   }
 }

@@ -27,4 +27,6 @@ class ChatViewModel(private val repo: ChatRepository) : ViewModel() {
   fun send(room: String, text: String) {
     repo.sendMessage(room, text)
   }
+
+  fun whoami(): String = repo.whoami()
 }
